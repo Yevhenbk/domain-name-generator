@@ -1,1 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container {
+  text-align: center;
+}
+#myDomain {
+  padding-top: 0.75rem;
+}
