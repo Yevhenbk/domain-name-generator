@@ -7,9 +7,40 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   document.getElementById("button").addEventListener("click", () => {
-    document.getElementById("myDomain").innerHTML = theDomain();
+    document.getElementById("myDomain").innerHTML = theDomain2();
   });
 };
+
+const PRONOUMS = ["the", "our", "just"];
+const NOUNS = ["doit", "malcom", "breathcode"];
+const EXTENSIONS = ["com", "it", "de"];
+
+function theDomain2() {
+  let domain = [];
+  for (const pronoum of PRONOUMS) {
+    for (const noun of NOUNS) {
+      for (const extension of EXTENSIONS) {
+        let firstPart = pronoum.concat(noun);
+
+        if (checkExtension(firstPart, extension)) {
+          let auxList = [...firstPart];
+          auxList.splice(firstPart.length - extension.length, 0, ".");
+          domain.push(auxList.join(""));
+        } else {
+          continue;
+          //domain.push(firstPart.concat(".", extension));
+        }
+      }
+    }
+  }
+  return domain;
+}
+function checkExtension(domainFirstPart, extension) {
+  return domainFirstPart.includes(
+    extension,
+    domainFirstPart.length - extension.length
+  );
+}
 
 let firstElement = ["the", "our"];
 let secondElement = ["great", "big"];
