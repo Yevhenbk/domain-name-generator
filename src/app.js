@@ -8,7 +8,6 @@ import "./assets/img/4geeks.ico";
 window.onload = () => {
   document.getElementById("button").addEventListener("click", () => {
     document.getElementById("myDomain").innerHTML = theDomain2();
-    //
   });
 };
 
@@ -27,9 +26,6 @@ function theDomain2() {
           let auxList = [...firstPart];
           auxList.splice(firstPart.length - extension.length, 0, ".");
           domain.push(auxList.join(""));
-        } else {
-          continue;
-          //domain.push(firstPart.concat(".", extension));
         }
       }
     }
