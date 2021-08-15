@@ -11,15 +11,15 @@ window.onload = () => {
   });
 };
 
-const PRONOUMS = ["the", "our", "just"];
-const NOUNS = ["doit", "malcom", "breathcode"];
-const EXTENSIONS = ["com", "it", "de"];
+var PRONOUMS = ["the", "our", "just"];
+var NOUNS = ["doit", "malcom", "breathcode"];
+var EXTENSIONS = ["com", "it", "de"];
 
 function theDomain2() {
   let domain = [];
-  for (const pronoum of PRONOUMS) {
-    for (const noun of NOUNS) {
-      for (const extension of EXTENSIONS) {
+  for (var pronoum of PRONOUMS) {
+    for (var noun of NOUNS) {
+      for (var extension of EXTENSIONS) {
         let firstPart = pronoum.concat(noun);
 
         if (checkExtension(firstPart, extension)) {
