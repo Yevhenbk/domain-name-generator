@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   document.getElementById("button").addEventListener("click", () => {
-    document.getElementById("myDomain").innerHTML = theDomain2();
+    document.getElementById("myDomain").innerHTML = theDomain();
   });
 };
 
